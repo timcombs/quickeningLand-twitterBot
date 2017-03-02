@@ -1,4 +1,9 @@
-console.log ("bot starting");
+/*
+This twitter bot is based on the amazing tutorials and repository by Daniel Shiffman
+https://github.com/CodingTrain/Rainbow-Code/tree/master/bots
+*/
+
+console.log("bot starting");
 
 // imports & stores twit package in a JS object
 var Twit = require('twit');
@@ -33,13 +38,14 @@ function tweetEvent(eventMsg) {
     var paramArray =[];
 
     //pushes words into paramArray if they are > 5 characters long
-    for (i = 1; i<tweetArray.length; i++) {
+    for (i = 1; i < tweetArray.length; i++) {
       if (tweetArray[i].length > 5) {
         paramArray.push(tweetArray[i]);
       }
     }
 
-    //params is an object with the params array and a count property?
+    //params is an object with the params array
+    //count property is the number of the tweets that you get back
     var params = {
       q: paramArray,
       count: 1
