@@ -1,0 +1,14 @@
+{
+  "name": "npm_demo",
+  "version": "1.0.0",
+  "description": "demonstrating npm",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "deSolid State",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.2"
+  }
+}
