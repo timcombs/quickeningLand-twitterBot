@@ -3,7 +3,7 @@ This twitter bot is based on the amazing tutorials and repository by Daniel Shif
 https://github.com/CodingTrain/Rainbow-Code/tree/master/bots
 */
 
-console.log("bot starting");
+console.log('bot starting');
 
 // imports & stores twit package in a JS object
 var Twit = require('twit');
@@ -49,7 +49,7 @@ function tweetEvent(eventMsg) {
     var params = {
       q: paramArray,
       count: 1
-    }
+    };
 
     //searches for tweet that contain parameters
     T.get('search/tweets', params, gotData);
@@ -73,15 +73,15 @@ function tweetEvent(eventMsg) {
 function tweetIt(txt) {
   var tweet = {
     status: txt
-  }
+  };
 
   T.post('statuses/update', tweet, tweeted);
 
   function tweeted(err, data, response) {
     if (err) {
-      console.log("Something went wrong!");
+      console.log('Something went wrong!');
     } else {
-      console.log("It worked!");
+      console.log('It worked!');
     }
   }
 }
